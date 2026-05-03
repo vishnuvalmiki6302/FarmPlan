@@ -15,8 +15,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="text-2xl font-black text-white mb-4 flex items-center gap-2">
-              <span>🌿</span> FarmLayout
+            <div className="mb-6">
+              <img src="src/Assets/Logo.png" alt="Rythu Margadarshi Logo" className="h-14 w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
               Leading the way in precision agricultural design. We help farmers grow better,
@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Social / Contact Icons */}
             <div className="flex gap-3">
               <button
-                onClick={() => openWhatsApp('Hi, I want to know about FarmLayout Design Services.')}
+                onClick={() => openWhatsApp('Hi, I want to know about Rythu Margadarshi Design Services.')}
                 className="w-9 h-9 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors"
                 aria-label="WhatsApp"
               >
@@ -35,7 +35,7 @@ export default function Footer() {
                 </svg>
               </button>
               <a
-                href="mailto:contact@farmlayout.com"
+                href="mailto:contact@rythumargadarshi.com"
                 className="w-9 h-9 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors"
                 aria-label="Email"
               >
@@ -108,8 +108,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-500 text-xs mb-0.5">Email</p>
-                  <a href="mailto:contact@farmlayout.com" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    contact@farmlayout.com
+                  <a href="mailto:contact@rythumargadarshi.com" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
+                    contact@rythumargadarshi.com
                   </a>
                 </div>
               </li>
@@ -133,13 +133,13 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} FarmLayout Design Services. All rights reserved.
+            © {new Date().getFullYear()} Rythu Margadarshi Design Services. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-500">
             <button className="hover:text-green-400 transition-colors">Privacy Policy</button>
             <button className="hover:text-green-400 transition-colors">Terms of Service</button>
             <button
-              onClick={() => openWhatsApp('Hi, I need support with FarmLayout.')}
+              onClick={() => openWhatsApp('Hi, I need support with Rythu Margadarshi.')}
               className="hover:text-green-400 transition-colors"
             >
               Support

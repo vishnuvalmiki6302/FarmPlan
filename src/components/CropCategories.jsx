@@ -2,33 +2,33 @@ import CropCard from './CropCard';
 
 const CROPS = [
   {
-    emoji: '🥔',
-    name: 'Potato',
-    description: 'Optimized ridge spacing, irrigation channels, and soil aeration layouts for maximum tuber yield.',
+    emoji: '🏝️',
+    name: 'Tropical Fruits',
+    description: 'Precision layouts for Mango, Banana, Pineapple, Sapota, and Jackfruit.',
     color: 'lime',
   },
   {
-    emoji: '🍌',
-    name: 'Banana',
-    description: 'Precision tree spacing, windbreak planning, and drip irrigation systems for tropical climates.',
+    emoji: '☀️',
+    name: 'Sub-tropical',
+    description: 'Expert designs for Guava, Fig, Citrus, Pomegranate, Bael, and Date-palm.',
     color: 'green',
   },
   {
-    emoji: '🌾',
-    name: 'Rice',
-    description: 'Paddy field terracing, bund design, water management, and transplanting grid layouts.',
+    emoji: '❄️',
+    name: 'Temperate Fruits',
+    description: 'Specialized spacing for Apple, Pear, Peach, Plum, and Cherry.',
     color: 'emerald',
   },
   {
-    emoji: '🥦',
-    name: 'Vegetables',
-    description: 'Multi-crop rotation zones, raised bed planning, and sunlight exposure mapping for kitchen gardens.',
+    emoji: '🥜',
+    name: 'Nut Crops',
+    description: 'Blueprint planning for Almond, Walnut, Pecan, and Hazelnut.',
     color: 'teal',
   },
   {
-    emoji: '🌱',
-    name: 'Mixed Crops',
-    description: 'Intercropping strategies, companion planting maps, and polyculture layouts for diverse farms.',
+    emoji: '🥥',
+    name: 'Plantation Crops',
+    description: 'Orchard-style layouts for Coconut, Cashew, and Cocoa.',
     color: 'cyan',
   },
 ];
@@ -40,11 +40,11 @@ export default function CropCategories() {
         {/* Section Header */}
         <div className="text-center mb-14">
           <span className="section-label">What We Cover</span>
-          <h2 className="section-title mb-4">Our Specialized Crop Layouts</h2>
+          <h2 className="section-title mb-4">Our Fruit Crop Layout Specializations</h2>
           <div className="h-1.5 w-20 bg-green-500 mx-auto rounded-full" />
           <p className="mt-5 text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
-            From staple grains to exotic fruits — we design precision farm layouts
-            tailored to each crop's unique growth requirements.
+            From tropical bananas to exotic dragon fruit — we design precision orchard layouts
+            tailored to each fruit crop's unique growth and spacing requirements.
           </p>
         </div>
 

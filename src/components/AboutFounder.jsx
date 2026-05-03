@@ -1,6 +1,6 @@
 const ACHIEVEMENTS = [
   { icon: '🏅', label: 'Licensed Agricultural Engineer' },
-  { icon: '🎓', label: 'MSc. Agricultural Science, Pune University' },
+  { icon: '🎓', label: 'BSc. Agricultural Science, Lovely Professional University' },
   { icon: '🌍', label: 'Served 500+ Farmers Across India' },
 ];
 
@@ -17,20 +17,12 @@ export default function AboutFounder() {
 
             {/* Image card */}
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl shadow-green-900/10 border-4 border-white">
-              <div className="bg-gradient-to-br from-green-100 to-green-200 w-full h-96 flex items-center justify-center flex-col gap-4">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-6xl shadow-xl">
-                  👨‍🌾
-                </div>
-                <div className="text-center">
-                  <p className="font-black text-green-900 text-xl">Ranjith Kumar</p>
-                  <p className="text-green-700 text-sm font-medium">Principal Agricultural Architect</p>
-                </div>
-              </div>
+              <img src="src/Assets/Ranjith.webp" alt="Ranjith" className="w-full h-96 object-cover object-[center_30%]" />
             </div>
 
             {/* Experience badge */}
             <div className="absolute -bottom-5 left-8 z-20 bg-green-600 text-white rounded-2xl px-6 py-4 shadow-xl">
-              <p className="text-3xl font-black leading-none">15+</p>
+              <p className="text-3xl font-black leading-none">2+</p>
               <p className="text-xs font-bold uppercase tracking-wider opacity-90 mt-0.5">Years Experience</p>
             </div>
           </div>
@@ -39,12 +31,12 @@ export default function AboutFounder() {
           <div className="flex flex-col gap-6">
             <div>
               <span className="section-label">Meet the Founder</span>
-              <h2 className="section-title mb-1">Ranjith Kumar</h2>
-              <p className="text-green-600 font-semibold text-base italic">Principal Agricultural Architect</p>
+              <h2 className="section-title mb-1">Ranjith</h2>
+              <p className="text-green-600 font-semibold text-base italic">Agricultural Architicultur Management</p>
             </div>
 
             <p className="text-gray-600 leading-relaxed text-base">
-              Passionate about modern farming and efficient land design, Rajesh has spent over 15 years
+              Passionate about modern farming and efficient land design, Ranjith has spent over 2 years
               in agricultural engineering and land management. His methodology combines traditional
               Indian farming wisdom with cutting-edge spatial data analytics to design layouts that
               genuinely transform farm productivity.

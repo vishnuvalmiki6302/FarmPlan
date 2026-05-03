@@ -8,9 +8,9 @@ const CHECK_ICON = (
 
 /**
  * Reusable DesignCard component.
- * @param {{ title: string, emoji: string, features: string[], gradient: string, id: string }} props
+ * @param {{ title: string, emoji: string, image?: string, features: string[], gradient: string, id: string }} props
  */
-export default function DesignCard({ title, emoji, features, gradient, accentColor, id }) {
+export default function DesignCard({ title, emoji, image, features, gradient, accentColor, id }) {
   return (
     <article
       id={id}
@@ -18,22 +18,36 @@ export default function DesignCard({ title, emoji, features, gradient, accentCol
                  hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300
                  border border-gray-100 flex flex-col"
     >
-      {/* Image Placeholder */}
-      <div className={`relative h-52 overflow-hidden ${gradient} flex items-center justify-center`}>
-        {/* Subtle grid pattern */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: 'linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)',
-            backgroundSize: '24px 24px',
-          }}
-        />
-        <div className="relative z-10 text-center">
-          <div className="text-6xl mb-2 group-hover:scale-110 transition-transform duration-300">{emoji}</div>
-          <p className="text-sm font-semibold text-white/90 bg-black/20 rounded-full px-3 py-1 backdrop-blur-sm">
-            Layout Preview
-          </p>
-        </div>
+      {/* Card Header — real image or gradient placeholder */}
+      <div className={`relative h-52 overflow-hidden flex items-center justify-center
+                      ${image ? 'bg-gradient-to-br from-gray-50 to-gray-100' : gradient}`}>
+
+        {image ? (
+          /* Real product image */
+          <img
+            src={image}
+            alt={title}
+            className="h-44 w-auto object-contain drop-shadow-xl
+                       group-hover:scale-110 transition-transform duration-500"
+          />
+        ) : (
+          /* Emoji + grid fallback */
+          <>
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: 'linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)',
+                backgroundSize: '24px 24px',
+              }}
+            />
+            <div className="relative z-10 text-center">
+              <div className="text-6xl mb-2 group-hover:scale-110 transition-transform duration-300">{emoji}</div>
+              <p className="text-sm font-semibold text-white/90 bg-black/20 rounded-full px-3 py-1 backdrop-blur-sm">
+                Layout Preview
+              </p>
+            </div>
+          </>
+        )}
 
         {/* Corner badge */}
         <div className="absolute top-4 right-4 bg-white/90 rounded-full px-3 py-1 text-xs font-bold text-green-700 backdrop-blur-sm shadow-sm">

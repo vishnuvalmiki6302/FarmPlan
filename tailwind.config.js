@@ -68,7 +68,9 @@ export default {
         'hero-gradient': 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 40%, #bbf7c9 100%)',
         'dot-pattern': 'radial-gradient(circle, #becab9 1px, transparent 1px)',
       },
-      backgroundSize: {
+      spacing: {
+        '92': '23rem',
+        '94': '23.5rem',
         'dot-32': '32px 32px',
       },
       animation: {

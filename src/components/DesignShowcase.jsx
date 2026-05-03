@@ -3,47 +3,49 @@ import { openWhatsApp } from '../utils/whatsapp';
 
 const DESIGNS = [
   {
-    id: 'potato',
-    title: 'Potato Farm Layout',
-    emoji: '🥔',
-    gradient: 'bg-gradient-to-br from-amber-400 to-amber-600',
-    features: [
-      'Water-Efficient Ridge Irrigation',
-      'Proper Row & Plant Spacing',
-      'Easy Harvest Path Access',
-    ],
-  },
-  {
     id: 'banana',
     title: 'Banana Farm Layout',
     emoji: '🍌',
+    image: 'https://png.pngtree.com/png-clipart/20220716/ourmid/pngtree-banana-yellow-fruit-banana-skewers-png-image_5944324.png',
     gradient: 'bg-gradient-to-br from-yellow-400 to-green-500',
     features: [
-      'Wind-Resistant Tree Spacing',
-      'Drip Irrigation System',
-      'Sucker Management Zones',
+      'Optimized Tree Row Spacing',
+      'Drip Irrigation System Design',
+      'Sucker & Windbreak Management',
     ],
   },
   {
-    id: 'rice',
-    title: 'Rice Field Layout',
-    emoji: '🌾',
-    gradient: 'bg-gradient-to-br from-green-400 to-teal-600',
+    id: 'guava',
+    title: 'Guava Orchard Layout',
+    emoji: '🍈',
+    image: 'https://png.pngtree.com/png-vector/20250219/ourmid/pngtree-isolated-guava-fruit-one-whole-green-and-a-sliced-half-with-png-image_15504785.png',
     features: [
-      'Precision Drainage Channels',
-      'Bund & Terrace Optimization',
-      'Transplanting Grid Layout',
+      'High-Density Planting Grid',
+      'Furrow Irrigation Channels',
+      'Canopy Path Access Design',
     ],
   },
   {
-    id: 'vegetable',
-    title: 'Vegetable Farm Layout',
-    emoji: '🥦',
-    gradient: 'bg-gradient-to-br from-emerald-500 to-green-700',
+    id: 'dragon-fruit',
+    title: 'Dragon Fruit Layout',
+    emoji: '🌵',
+    image: 'https://static.vecteezy.com/system/resources/previews/029/333/921/non_2x/dragon-fruit-transparent-background-png.png',
+    gradient: 'bg-gradient-to-br from-pink-400 to-rose-600',
     features: [
-      'Multi-Crop Rotation Zones',
-      'Raised Bed Configuration',
-      'Sunlight & Shade Mapping',
+      'Trellis Pole Placement Map',
+      'Sunlight Row Orientation',
+      'Drip Pipe Network Design',
+    ],
+  },
+  {
+    id: 'mango',
+    title: 'Mango Orchard Layout',
+    emoji: '🥭',
+    image: 'https://png.pngtree.com/png-vector/20240125/ourmid/pngtree-sweet-mango-fruit-png-png-image_11495826.png',
+    gradient: 'bg-gradient-to-br from-orange-400 to-amber-600',
+    features: [
+      'Orchard Spacing Optimization',
+      'Inter-Crop Zone Planning',
     ],
   },
 ];
@@ -56,9 +58,9 @@ export default function DesignShowcase() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-14">
           <div>
             <span className="section-label">Design Gallery</span>
-            <h2 className="section-title">Featured Layout Designs</h2>
+            <h2 className="section-title">Featured Fruit Layout Designs</h2>
             <p className="text-gray-500 mt-3 text-base max-w-lg">
-              Our latest blueprints for high-efficiency agriculture — precision engineered for your land.
+              Our latest fruit orchard blueprints — precision engineered for maximum yield on your land.
             </p>
           </div>
           <button

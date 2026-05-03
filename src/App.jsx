@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import CropCategories from './components/CropCategories';
 import DesignShowcase from './components/DesignShowcase';
 import AboutFounder from './components/AboutFounder';
+import SocialShowcase from './components/SocialShowcase';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -16,9 +17,10 @@ export default function App() {
       {/* Page Sections */}
       <main>
         <Hero />
-        <CropCategories />
         <DesignShowcase />
+        <CropCategories />
         <AboutFounder />
+        <SocialShowcase />
         <CTASection />
       </main>
 
