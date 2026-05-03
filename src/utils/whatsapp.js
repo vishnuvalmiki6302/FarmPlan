@@ -3,7 +3,7 @@
  * @param {string} message - The pre-filled message to send.
  */
 export function openWhatsApp(message = "Hi, I want to book a Farm Layout Design.") {
-  const phone = "919999999999"; // Replace with actual WhatsApp number
+  const phone = "919392699963"; // Replace with actual WhatsApp number
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank", "noopener,noreferrer");
 }
