@@ -1,3 +1,5 @@
+import ranjithPhoto from '../Assets/Ranjith.webp';
+
 const ACHIEVEMENTS = [
   { icon: '🏅', label: 'Licensed Agricultural Engineer' },
   { icon: '🎓', label: 'BSc. Agricultural Science, Lovely Professional University' },
@@ -17,7 +19,7 @@ export default function AboutFounder() {
 
             {/* Image card */}
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl shadow-green-900/10 border-4 border-white">
-              <img src="src/Assets/Ranjith.webp" alt="Ranjith" className="w-full h-96 object-cover object-[center_30%]" />
+              <img src={ranjithPhoto} alt="Ranjith" className="w-full h-96 object-cover object-[center_30%]" />
             </div>
 
             {/* Experience badge */}

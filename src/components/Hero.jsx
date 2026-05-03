@@ -1,4 +1,5 @@
 import { openWhatsApp } from '../utils/whatsapp';
+import layoutImage from '../Assets/Layout.jpeg';
 
 const HERO_STATS = [
   { value: '500+', label: 'Farm Layouts Designed' },
@@ -117,7 +118,7 @@ export default function Hero() {
               <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 mb-5 flex items-center justify-center min-h-48">
                 <div className="text-center">
                   <div className="text-6xl mb-3">
-                    <img src="src/Assets/Layout.jpeg" alt="" />
+                    <img src={layoutImage} alt="Farm Layout Design" />
                   </div>
                   <p className="font-bold text-green-800 text-lg">Farm Blueprint</p>
                   <p className="text-green-600 text-sm mt-1">Precision. Yield. Sustainability.</p>

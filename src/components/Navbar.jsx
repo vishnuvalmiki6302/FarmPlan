@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { openWhatsApp } from '../utils/whatsapp';
+import logo from '../Assets/Logo.png';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -41,7 +42,7 @@ export default function Navbar() {
           id="nav-logo"
           aria-label="Rythu Margadarshi Home"
         >
-          <img src="src/Assets/Logo.png" alt="Rythu Margadarshi Logo" className="h-10 w-auto" />
+          <img src={logo} alt="Rythu Margadarshi Logo" className="h-10 w-auto" />
         </button>
 
         {/* Desktop Links & Socials */}

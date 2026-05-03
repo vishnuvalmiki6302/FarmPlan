@@ -1,4 +1,5 @@
 import { openWhatsApp } from '../utils/whatsapp';
+import logo from '../Assets/Logo.png';
 
 const QUICK_LINKS = ['Home', 'Designs', 'About', 'Contact'];
 const CROP_LINKS = ['Potato Layout', 'Banana Layout', 'Rice Layout', 'Vegetable Layout', 'Mixed Crops'];
@@ -16,7 +17,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <img src="src/Assets/Logo.png" alt="Rythu Margadarshi Logo" className="h-14 w-auto brightness-0 invert" />
+              <img src={logo} alt="Rythu Margadarshi Logo" className="h-14 w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
               Leading the way in precision agricultural design. We help farmers grow better,
