@@ -112,7 +112,7 @@ export default function Hero() {
           </div>
 
           {/* Right — Stats & Visual Card */}
-          <div className="hidden lg:flex flex-col gap-6">
+          <div className="flex flex-col gap-6 mt-12 lg:mt-0">
             {/* Main Visual Card */}
             <div className="glass-card rounded-3xl p-6 border border-green-100 shadow-card-hover">
               <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 mb-5 flex items-center justify-center min-h-48">
