@@ -2,8 +2,8 @@ import { openWhatsApp } from '../utils/whatsapp';
 import layoutImage from '../Assets/Layout.jpeg';
 
 const HERO_STATS = [
-  { value: '500+', label: 'Farm Layouts Designed' },
-  { value: '15+', label: 'Years of Experience' },
+  { value: '1050+', label: 'Farm Layouts Designed' },
+  { value: '2+', label: 'Years of Experience' },
   { value: '98%', label: 'Farmer Satisfaction' },
 ];
 
