@@ -2,7 +2,7 @@ import { openWhatsApp } from '../utils/whatsapp';
 import logo from '../Assets/Logo.png';
 
 const QUICK_LINKS = ['Home', 'Designs', 'About', 'Contact'];
-const CROP_LINKS = ['Potato Layout', 'Banana Layout', 'Rice Layout', 'Vegetable Layout', 'Mixed Crops'];
+const CROP_LINKS = ['Banana Layout', 'Rice Layout', 'Vegetable Layout', 'Mixed Crops'];
 
 export default function Footer() {
   const scrollTo = (id) => {
@@ -95,8 +95,8 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-500 text-xs mb-0.5">WhatsApp</p>
-                  <a href="tel:+919999999999" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    +91 99999 99999
+                  <a href="tel:+919392699963" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
+                    +91 93926 99963
                   </a>
                 </div>
               </li>
@@ -110,7 +110,7 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-500 text-xs mb-0.5">Email</p>
                   <a href="mailto:contact@rythumargadarshi.com" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    contact@rythumargadarshi.com
+                    kr3917678@gmail.com
                   </a>
                 </div>
               </li>
@@ -124,7 +124,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-500 text-xs mb-0.5">Location</p>
-                  <p className="text-gray-300 font-medium">Agriculture District, Maharashtra, India</p>
+                  <p className="text-gray-300 font-medium">Gadwal District, Telangana, India</p>
                 </div>
               </li>
             </ul>
