@@ -1,5 +1,12 @@
+import { useState, useEffect } from 'react';
 import { openWhatsApp } from '../utils/whatsapp';
 import layoutImage from '../Assets/Layout.jpeg';
+import layout2Image from '../Assets/Layout2.jpeg';
+import layout3Image from '../Assets/Layout3.jpeg';
+import logo from '../Assets/Logo.png';
+import whatsappIcon from '../Assets/WhatsApp_icon.png';
+
+const GALLERY_IMAGES = [layoutImage, layout2Image, layout3Image];
 
 const HERO_STATS = [
   { value: '1050+', label: 'Farm Layouts Designed' },
@@ -8,6 +15,19 @@ const HERO_STATS = [
 ];
 
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % GALLERY_IMAGES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % GALLERY_IMAGES.length);
+  };
+
   const handleScroll = (id) => {
     document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,7 +35,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden hero-gradient-animated"
+      className="relative min-h-screen flex items-center overflow-hidden bg-green-200"
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -37,7 +57,16 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-24 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left — Text Content */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 mt-20 md:mt-0">
+            {/* Minimal Weather Pill */}
+            <div className="inline-flex items-center gap-3 bg-white/30 backdrop-blur-md border border-white/50 rounded-full px-4 py-2 self-start shadow-sm">
+              <span className="text-xl drop-shadow-sm">🌤️</span>
+              <div className="flex flex-col">
+                <span className="text-sm font-bold text-gray-800 leading-none">28°C · Sunny</span>
+                <span className="text-[10px] text-green-700 font-semibold mt-0.5 uppercase tracking-wider">Perfect for planting</span>
+              </div>
+            </div>
+
             <span className="section-label">Professional Agricultural Design</span>
 
             <h1 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight text-balance">
@@ -75,10 +104,7 @@ export default function Hero() {
                            hover:-translate-y-0.5 active:scale-95 transition-all duration-200
                            flex items-center gap-3"
               >
-                <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                  <path d="M11.998 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.523 5.849L.057 23.404a.5.5 0 0 0 .611.612l5.665-1.475A11.948 11.948 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0h-.002z" />
-                </svg>
+                <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6 rounded-full" />
                 Book via WhatsApp
               </button>
 
@@ -112,13 +138,41 @@ export default function Hero() {
           </div>
 
           {/* Right — Stats & Visual Card */}
-          <div className="flex flex-col gap-6 mt-12 lg:mt-0">
+          <div className="flex flex-col gap-5 mt-12 lg:mt-0 max-w-lg mx-auto w-full">
             {/* Main Visual Card */}
-            <div className="glass-card rounded-3xl p-6 border border-green-100 shadow-card-hover">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 mb-5 flex items-center justify-center min-h-48">
-                <div className="text-center">
-                  <div className="text-6xl mb-3">
-                    <img src={layoutImage} alt="Farm Layout Design" />
+            <div className="glass-card rounded-3xl p-4 border border-green-100 shadow-card-hover">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-4 mb-4 flex items-center justify-center min-h-48 relative overflow-hidden">
+                {/* Logo Badge */}
+                <div className="absolute top-3 left-3 bg-white rounded-full p-1.5 h-12 w-12 shadow-lg flex items-center justify-center border border-green-50 z-20">
+                  <img src={logo} alt="Logo" className="h-6 w-auto object-contain" />
+                </div>
+
+                <div className="text-center relative z-10 w-full">
+                  <div className="mb-3 relative group w-full">
+                    <img 
+                      src={GALLERY_IMAGES[currentImageIndex]} 
+                      alt={`Farm Layout Design ${currentImageIndex + 1}`} 
+                      className="rounded-xl shadow-sm w-full h-auto object-cover transition-opacity duration-300 aspect-video" 
+                    />
+                    
+                    {/* Next Image Button */}
+                    <button 
+                      onClick={handleNextImage}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md w-10 h-10 flex items-center justify-center rounded-full shadow-lg border border-green-100 text-green-800 hover:bg-green-50 hover:scale-110 active:scale-95 transition-all duration-200 opacity-0 group-hover:opacity-100"
+                      aria-label="Next Image"
+                    >
+                      ▶
+                    </button>
+
+                    {/* Image Indicators */}
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/20 px-2 py-1 rounded-full backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      {GALLERY_IMAGES.map((_, idx) => (
+                        <div 
+                          key={idx} 
+                          className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'bg-white scale-125' : 'bg-white/50'}`}
+                        />
+                      ))}
+                    </div>
                   </div>
                   <p className="font-bold text-green-800 text-lg">Farm Blueprint</p>
                   <p className="text-green-600 text-sm mt-1">Precision. Yield. Sustainability.</p>
